@@ -4,10 +4,10 @@ import Nav from './components/nav'
 const App = () => (
     <main className="relative">
         <Nav />
-        <section className="padding">
+        <section className="/">
             <Hero />
         </section>
-        <section className="padding">
+        <section className=" bg-slate-700">
             <Projects />
         </section>
         <section className="padding">
