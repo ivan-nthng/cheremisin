@@ -23,12 +23,33 @@ const Projects = () => {
                 initial="hidden"
                 animate="show"
                 id="home"
-                className=" w-full grid grid-cols-3 p-10 gap-10 "
+                className=" w-full grid grid-cols-3 p-4 gap-4 "
             >
                 <motion.div
                     variants={gridSquareVariants}
-                    className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
-                ></motion.div>
+                    className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-4"
+                >
+                    <motion.div
+                        className="w-20 h-20 bg-stone-100 rounded-lg"
+                        initial={{ opacity: 0, y: 100 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.4,
+                            ease: 'easeOut',
+                            delay: 0.2,
+                        }}
+                    ></motion.div>
+                    <motion.div
+                        className="w-20 h-20 bg-stone-100 rounded-full"
+                        initial={{ opacity: 0, y: -100 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.4,
+                            ease: 'easeOut',
+                            delay: 0.4,
+                        }}
+                    ></motion.div>
+                </motion.div>
                 <motion.div
                     variants={gridSquareVariants}
                     className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
